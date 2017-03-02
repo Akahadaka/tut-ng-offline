@@ -11,14 +11,17 @@
 </div>-->
 
 <div class="flex-container" fxLayout="column" fxLayoutAlign="space-around center">
-        <div class="flex-item">
-                <md-icon class="lock-icon material-icons md-60p" svgIcon="login-page-lock"></md-icon>
-        </div>
-        <div class="flex-item">
-                <button md-button class="login" (click)="loginGoogle()">
-                        <md-icon class="material-icons md-48" svgIcon="sign-in-with-google"></md-icon>
-                        Sign in with Google
-                </button>
-        </div>
+    <div class="flex-item">
+        <md-icon class="lock-icon material-icons md-60p" svgIcon="login-page-lock"></md-icon>
+    </div>
+    <div class="flex-item">
+        <span class="error" *ngIf="error">{{ error }}</span>
+    </div>
+    <div class="flex-item">
+        <button md-button class="login" (click)="loginGoogle()">
+            <md-icon class="material-icons md-48" svgIcon="sign-in-with-google"></md-icon>
+            Sign in with Google
+        </button>
+    </div>
 </div>
 

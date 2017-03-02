@@ -42,6 +42,15 @@ export class LoginComponent implements OnInit {
         );
     }
 
+    loginGoogle() {
+        this.authService.loginGoogle().then(() => {
+            this.router.navigate(['/members']);
+        }).catch((err) => {
+            this.error = err;
+        });
+    }
+        
+
 /*
     constructor(public af: AngularFire, private router: Router) {
         this.af.auth.subscribe(auth => {

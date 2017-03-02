@@ -10,7 +10,7 @@ import { AppComponent }                 from './app.component';
 
 export const _APP_ROUTES: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
-    //{ path: 'members', component: MembersComponent }//, canActivate: [AuthGuard] }
+    { path: 'members', component: MembersComponent }//, canActivate: [AuthGuard] }
 ]
 
 export const APP_ROUTES: ModuleWithProviders = RouterModule.forRoot(_APP_ROUTES);

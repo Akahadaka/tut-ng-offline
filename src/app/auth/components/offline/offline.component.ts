@@ -14,13 +14,13 @@ import 'rxjs/Rx';
 })
 export class OfflineComponent implements OnInit {
 
-    offline: Observable<boolean>;
+    online: Observable<boolean>;
 
     constructor(public snackBar: MdSnackBar) { 
-        this.offline = Observable.merge(
+        this.online = Observable.merge(
             Observable.of(navigator.onLine),
-            Observable.fromEvent(window, 'online').map(() => false),
-            Observable.fromEvent(window, 'offline').map(() => true)
+            Observable.fromEvent(window, 'online').map(() => true),
+            Observable.fromEvent(window, 'offline').map(() => false)
         );
     }
 
