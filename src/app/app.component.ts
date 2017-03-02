@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+// angular
+import { Component }                    from '@angular/core';
+
+// app
+import { OfflineComponent }             from './auth/components/offline/offline.component';
 
 @Component({
   selector: 'app-root',

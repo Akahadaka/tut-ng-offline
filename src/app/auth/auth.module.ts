@@ -12,10 +12,12 @@ import { AUTH_ROUTES }                  from './auth.routes';
 
 // app
 import { LoginComponent }               from './components/login/login.component';
+//import { OfflineComponent }             from './components/offline/offline.component';
 
 @NgModule({
     declarations: [
-        LoginComponent
+        LoginComponent,
+        //OfflineComponent
     ],
     imports: [
         CommonModule,
