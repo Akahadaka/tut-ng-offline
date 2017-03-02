@@ -1,6 +1,7 @@
 {
     "short_name": "Offline",
-    "name": "Tutorial Angular Offline",
+    "name": "Tut Ng Offline",
+    "description": "Tutorial for an Angular PWA accessible offline",
     "icons": [{
         "src": "assets/touch/icon-128x128.png",
         "type": "image/png",
@@ -18,5 +19,9 @@
         "type": "image/png",
         "sizes": "192x192"
     }],
-    "start_url": "index.html?utm_source=homescreen"
+    "start_url": "index.html?utm_source=homescreen",
+    "background_color": "#000",
+    "theme_color": "#000",
+    "display": "standalone",
+    "orientation": "landscape"
 }
