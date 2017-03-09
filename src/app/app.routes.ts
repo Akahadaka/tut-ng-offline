@@ -7,6 +7,7 @@ import { Routes, RouterModule }         from '@angular/router';
 
 // app
 import { AppComponent }                 from './app.component';
+import { MembersComponent }             from './components/members/members.component';
 
 export const _APP_ROUTES: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },

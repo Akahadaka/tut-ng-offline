@@ -18,7 +18,8 @@ import { APP_ROUTES }                   from './app.routes';
 
 // app
 import { AppComponent }                 from './app.component';
-import { OfflineComponent }             from './auth/components/offline/offline.component';
+import { MembersComponent }             from './components/members/members.component';
+//import { OfflineComponent }             from './auth/components/offline/offline.component';
 
 // Firebase
 //import * as firebaseConfig from '../firebase.config.json';
@@ -33,7 +34,8 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    OfflineComponent
+    MembersComponent,
+    //OfflineComponent
   ],
   imports: [
     BrowserModule,
