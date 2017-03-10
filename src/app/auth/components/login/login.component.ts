@@ -32,6 +32,11 @@ export class LoginComponent implements OnInit {
         private mdIconRegistry: MdIconRegistry,
         private sanitizer: DomSanitizer
     ) {
+        // Check auth state
+        if (authService.authorised) {
+            this.router.navigate(['/profile']);
+        } 
+
         // SVG Icons
         mdIconRegistry.addSvgIcon('login-page-lock', 
             sanitizer.bypassSecurityTrustResourceUrl('/assets/images/lock.svg')
@@ -44,7 +49,7 @@ export class LoginComponent implements OnInit {
 
     loginGoogle() {
         this.authService.loginGoogle().then(() => {
-            this.router.navigate(['/members']);
+            this.router.navigate(['/profile']);
         }).catch((err) => {
             this.error = err;
         });
@@ -55,7 +60,7 @@ export class LoginComponent implements OnInit {
     constructor(public af: AngularFire, private router: Router) {
         this.af.auth.subscribe(auth => {
             if (auth) {
-                this.router.navigateByUrl('/members');
+                this.router.navigateByUrl('/profile');
             } 
         });
     }
@@ -65,7 +70,7 @@ export class LoginComponent implements OnInit {
             provider: AuthProviders.Facebook,
             method: AuthMethods.Popup
         }).then((success) => {
-            this.router.navigate(['/members']);
+            this.router.navigate(['/profile']);
         }).catch((err) => {
             this.error = err;
         });
@@ -76,7 +81,7 @@ export class LoginComponent implements OnInit {
             provider: AuthProviders.Google,
             method: AuthMethods.Popup
         }).then((success) => {
-            this.router.navigate(['/members']);
+            this.router.navigate(['/profile']);
         }).catch((err) => {
             this.error = err;
         });

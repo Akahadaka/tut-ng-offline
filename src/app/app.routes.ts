@@ -7,11 +7,9 @@ import { Routes, RouterModule }         from '@angular/router';
 
 // app
 import { AppComponent }                 from './app.component';
-import { MembersComponent }             from './components/members/members.component';
 
 export const _APP_ROUTES: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
-    { path: 'members', component: MembersComponent }//, canActivate: [AuthGuard] }
 ]
 
 export const APP_ROUTES: ModuleWithProviders = RouterModule.forRoot(_APP_ROUTES);

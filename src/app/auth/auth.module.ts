@@ -5,7 +5,7 @@ import { MaterialModule }               from '@angular/material';
 import { FlexLayoutModule }             from '@angular/flex-layout';
 
 // app services
-import { AuthService }                  from './auth.service';
+import { AuthService, AuthGuard }       from './auth.service';
 
 // app routes
 import { AUTH_ROUTES }                  from './auth.routes';
@@ -13,11 +13,13 @@ import { AUTH_ROUTES }                  from './auth.routes';
 // app
 import { LoginComponent }               from './components/login/login.component';
 import { OfflineComponent }             from './components/offline/offline.component';
+import { ProfileComponent }             from './components/profile/profile.component';
 
 @NgModule({
     declarations: [
         LoginComponent,
-        OfflineComponent
+        OfflineComponent,
+        ProfileComponent,
     ],
     imports: [
         CommonModule,
@@ -30,7 +32,8 @@ import { OfflineComponent }             from './components/offline/offline.compo
        OfflineComponent
     ],
     providers: [
-        AuthService
+        AuthService,
+        AuthGuard
     ],
     entryComponents: [
         OfflineComponent

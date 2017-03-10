@@ -18,8 +18,6 @@ import { APP_ROUTES }                   from './app.routes';
 
 // app
 import { AppComponent }                 from './app.component';
-import { MembersComponent }             from './components/members/members.component';
-//import { OfflineComponent }             from './auth/components/offline/offline.component';
 
 // Firebase
 //import * as firebaseConfig from '../firebase.config.json';
@@ -32,23 +30,23 @@ export const firebaseConfig = {
 }
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MembersComponent,
-    //OfflineComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireOfflineModule,
-    AuthModule,
-    APP_ROUTES,
-    MaterialModule.forRoot(),
-    FlexLayoutModule.forRoot()
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        HttpModule,
+        AngularFireModule.initializeApp(firebaseConfig),
+        AngularFireOfflineModule,
+        AuthModule,
+        APP_ROUTES,
+        MaterialModule.forRoot(),
+        FlexLayoutModule.forRoot()
+    ],
+    providers: [],
+    bootstrap: [
+        AppComponent
+    ]
 })
 export class AppModule { }
